@@ -1,6 +1,8 @@
 ﻿using System;
 using lab_1.Classes;
 using lab_1.Enums;
+using static lab_1.lab_1_homework;
+
 namespace lab_1
 {
     class Program
@@ -46,6 +48,23 @@ namespace lab_1
             {
                 Console.WriteLine((string)p);
             }
+
+            var money1 = Money.OfWithException(10, Currency.USD);
+            var money2 = Money.OfWithException(15, Currency.USD);
+            Console.WriteLine(money1);
+            Console.WriteLine(money1 > money2);
+            Console.WriteLine(money1 == money2);
+            Console.WriteLine(money1 != money2);
+            var money3 = money1.Percent(50);
+            Console.WriteLine(money3);
+            var money4 = money1.ToCurrency(4, Currency.PLN);
+            Console.WriteLine(money4);
+
+            var u1 = new Ułamek(10, 15);
+            var u2 = new Ułamek(3, 7);
+            Console.WriteLine(u1 * u2);
+            Console.WriteLine(u1 * u2 + u2);
+
         }
     }
 }
